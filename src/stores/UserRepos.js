@@ -21,10 +21,10 @@ export class UserStore {
 
   onUpdateUserRepos(reposData) {
     let repos = reposData.sort( (a,b) => {
-      if (a[this.state.sort] > b[this.state.sort]) {
+      if (a[this.state.sort] < b[this.state.sort]) {
         return 1;
       }
-      if (a[this.state.sort] < b[this.state.sort]) {
+      if (a[this.state.sort] > b[this.state.sort]) {
         return -1;
       }
       return 0;

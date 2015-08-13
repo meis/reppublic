@@ -27,8 +27,8 @@ describe('UserStore', () => {
     let repos = Store.getState().repos;
 
     for ( let i = 0; i < repos.length; i++ ) {
-      let current = repos[0];
-      let next    = repos[1];
+      let current = repos[i];
+      let next    = repos[i+1];
 
       if (next) {
         assert.ok( current['stargazers_count'] >= next['stargazers_count']);
