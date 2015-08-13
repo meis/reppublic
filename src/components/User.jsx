@@ -1,13 +1,41 @@
-import React from 'react';
-import {RouteHandler} from 'react-router';
+import React           from 'react';
+import {RouteHandler}  from 'react-router';
+import UserStore       from '../stores/User';
+import connectToStores from 'alt/utils/connectToStores';
 
-export default React.createClass({
-  render: function() {
+class User extends React.Component {
+  static getStores() {
+    return [UserStore];
+  }
+
+  static getPropsFromStores() {
+    return UserStore.getState();
+  }
+
+  render() {
     return(
       <div>
-      <div>USER</div>
-      <RouteHandler />
+        {this.props.ready? this.withUserData() : this.withoutUserData()}
       </div>
     );
-  },
-});
+  }
+
+  withUserData() {
+    return(
+      <div>
+        <div>USER</div>
+        <RouteHandler />
+      </div>
+    );
+  }
+
+  withoutUserData() {
+    return(
+      <div>
+        Loading...
+      </div>
+    );
+  }
+}
+
+export default connectToStores(User);
