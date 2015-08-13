@@ -18,6 +18,9 @@ table.repos {
     }
     &.stargazers, &.watchers, &.forks {
       color: $statsColor;
+      .count {
+        margin-left: 5px;
+      }
     }
   }
 }

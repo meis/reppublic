@@ -28,7 +28,8 @@ class User extends React.Component {
         <div className="header">
           <div className="inner">
             <div className="title">
-              Popular repositories
+              <span className="octicon octicon-octoface"></span>
+              <span className="value">Popular repositories</span>
             </div>
               {this.props.ready? this.userInfo() : ''}
           </div>

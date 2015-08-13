@@ -20,6 +20,8 @@
       font-size: 1.2em;
       font-weight: bold;
       padding-top: 6px; }
+      .header .inner .title .value {
+        margin-left: 10px; }
     .header .inner .user-info img {
       height: 32px;
       width: 32px;
@@ -72,3 +74,5 @@ table.repos {
         color: #87A655; }
     table.repos td.stargazers, table.repos td.watchers, table.repos td.forks {
       color: #CDCDC7; }
+      table.repos td.stargazers .count, table.repos td.watchers .count, table.repos td.forks .count {
+        margin-left: 5px; }

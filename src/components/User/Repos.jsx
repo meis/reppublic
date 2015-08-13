@@ -36,13 +36,16 @@ class Repos extends React.Component {
             {m.name}
           </td>
           <td className="stargazers">
-            {m.stargazers_count}
+            <span className="octicon octicon-star"></span>
+            <span className="count">{m.stargazers_count}</span>
           </td>
           <td className="watchers">
-            {m.watchers_count}
+            <span className="octicon octicon-eye"></span>
+            <span className="count">{m.watchers_count}</span>
           </td>
           <td className="forks">
-            {m.forks_count}
+            <span className="octicon octicon-git-branch"></span>
+            <span className="count">{m.forks_count}</span>
           </td>
         </tr>
       );
