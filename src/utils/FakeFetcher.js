@@ -1,5 +1,6 @@
 import UserData  from './fake/user';
 import ReposData from './fake/repos';
+import RepoData from  './fake/repo';
 
 export default {
   userInfo: function(login) {
@@ -8,6 +9,10 @@ export default {
 
   userRepos: function(login) {
     return this.fakeFetch(ReposData);
+  },
+
+  repo: function(data) {
+    return this.fakeFetch(RepoData);
   },
 
   fakeFetch: function(data) {
