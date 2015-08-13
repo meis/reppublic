@@ -1,8 +1,8 @@
-import Alt      from 'src/Alt';
-import Store    from 'src/stores/User';
-import Actions  from 'src/actions/Actions';
+import Alt      from '../../src/Alt';
+import Store    from '../../src/stores/User';
+import Actions  from '../../src/actions/Actions';
 import {assert} from 'chai';
-import UserData from 'src/utils/fake/user';
+import UserData from '../../src/utils/fake/user';
 
 describe('UserStore', () => {
   // Restore all stores to original state before each test.

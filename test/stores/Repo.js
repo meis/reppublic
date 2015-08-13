@@ -1,8 +1,8 @@
-import Alt      from 'src/Alt';
-import Store    from 'src/stores/Repo';
-import Actions  from 'src/actions/Actions';
+import Alt      from '../../src/Alt';
+import Store    from '../../src/stores/Repo';
+import Actions  from '../../src/actions/Actions';
 import {assert} from 'chai';
-import RepoData from 'src/utils/fake/repo';
+import RepoData from '../../src/utils/fake/repo';
 
 describe('UserStore', () => {
   // Restore all stores to original state before each test.
