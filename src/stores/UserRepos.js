@@ -1,7 +1,7 @@
 import Alt     from '../Alt';
 import Actions from '../actions/Actions';
 
-export class UserStore {
+export class ReposStore {
   constructor() {
     this.bindActions(Actions);
     this.state = this.initialState();
@@ -42,4 +42,4 @@ export class UserStore {
   }
 }
 
-export default Alt.createStore(UserStore, 'UserReposStore');
+export default Alt.createStore(ReposStore, 'UserReposStore');
