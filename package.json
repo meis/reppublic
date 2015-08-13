@@ -28,9 +28,10 @@
   "homepage": "https://github.com/meis/reppublic",
   "dependencies": {
     "alt": "^0.17.1",
+    "es6-promise": "^3.0.2",
+    "isomorphic-fetch": "^2.1.1",
     "react": "^0.13.3",
-    "react-router": "^0.13.3",
-    "whatwg-fetch": "^0.9.0"
+    "react-router": "^0.13.3"
   },
   "devDependencies": {
     "babel": "^5.8.21",
@@ -39,6 +40,7 @@
     "browser-sync": "^2.8.2",
     "browserify": "^11.0.1",
     "chai": "^3.2.0",
+    "fetch": "^0.3.6",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-mocha": "^2.1.3",

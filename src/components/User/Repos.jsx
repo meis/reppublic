@@ -17,7 +17,7 @@ class Repos extends React.Component {
   componentDidMount() {
     // Ask for repos if they are not present
     if (!this.props.ready) {
-      Actions.requestUserRepos(this.props.params.userId);
+      Actions.requestUserRepos(this.props.params.login);
     }
   }
 
@@ -31,7 +31,7 @@ class Repos extends React.Component {
 
   withReposData() {
     let repos = this.props.repos.map((m) => {
-      let linkParams = {userId: this.props.params.userId, repo:m.name};
+      let linkParams = {login: this.props.params.login, repo:m.name};
 
       return (
         <tr className="repo" key={m.id}>

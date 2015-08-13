@@ -1,3 +1,8 @@
+import es6p from 'es6-promise';
+import fetch from 'isomorphic-fetch';
+
+es6p.polyfill();
+
 export default {
   userInfo: function(login) {
     return fetch('https://api.github.com/users/' + login)
@@ -13,7 +18,7 @@ export default {
     })
   },
 
-  repo: function(data) {
+  repo: function(data ={ }) {
     return fetch('https://api.github.com/repos/' + data.login + '/' + data.repo)
     .then(function(response) {
       return response.json()

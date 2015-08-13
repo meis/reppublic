@@ -18,12 +18,12 @@ let App = React.createClass({
 let routes = (
   <Route path="/" name="home" handler={App}>
 
-    <Route name="user" path=":userId" handler={User}>
+    <Route name="user" path=":login" handler={User}>
       <DefaultRoute handler={Repos}/>
       <Route name="repo" path=":repo" handler={Repo}/>
     </Route>
     // TODO: Do a proper landpage allowing to search users
-    <Redirect from="/" to="user" params={{userId: 'meis'}} />
+    <Redirect from="/" to="user" params={{login: 'meis'}} />
 
   </Route>
 );

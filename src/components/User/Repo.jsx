@@ -16,9 +16,9 @@ class Repo extends React.Component {
 
   componentDidMount() {
     // Ask for repos if they are not present
-    if (!this.props.ready || this.props.params.userId != this.props.login || this.props.params.repo != this.props.name) {
+    if (!this.props.ready || this.props.params.login != this.props.login || this.props.params.repo != this.props.name) {
       Actions.requestRepo({
-        login: this.props.params.userId,
+        login: this.props.params.login,
         repo: this.props.params.repo,
       });
     }
@@ -33,7 +33,7 @@ class Repo extends React.Component {
   }
 
   withData() {
-    let linkParams = {userId: this.props.params.userId};
+    let linkParams = {login: this.props.params.login};
 
     return(
       <div className="repo-page">
