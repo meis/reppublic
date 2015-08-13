@@ -25,16 +25,52 @@ class Repo extends React.Component {
   }
 
   render() {
+    return(
+      <div>
+        {this.props.ready? this.withData() : this.withoutData()}
+      </div>
+    );
+  }
+
+  withData() {
     let linkParams = {userId: this.props.params.userId};
 
     return(
-      <div>
-        REPO
+      <div className="repo-page">
+        <div className="repo-header">
+          <div className="name">
+            {this.props.name}
+          </div>
+          <div className="stats">
+            <span className="stat stargazers">
+              <span className="octicon octicon-star"></span>
+              <span className="count">{this.props.repo.stargazers_count}</span>
+            </span>
+            <span className="stat watchers">
+              <span className="octicon octicon-eye"></span>
+              <span className="count">{this.props.repo.watchers_count}</span>
+            </span>
+            <span className="stat forks">
+              <span className="octicon octicon-git-branch"></span>
+              <span className="count">{this.props.repo.forks_count}</span>
+            </span>
+          </div>
+        </div>
+
+        <div className="description">
+          {this.props.repo.description}
+        </div>
 
         <Link to="user" params={linkParams}>
           Back to list
         </Link>
       </div>
+    );
+  }
+
+  withoutData() {
+    return(
+      <Loading />
     );
   }
 }

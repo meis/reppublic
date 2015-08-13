@@ -1,0 +1,30 @@
+@import 'variables';
+
+.repo-page {
+  .repo-header {
+    margin-top: 10px;
+    position: relative;
+    .name {
+      color: $headerInnerBackground;
+      font-weight: bold;
+    }
+    .stats {
+      position: absolute;
+      top: 0;
+      right: 0;
+      .stat {
+        margin-left: 20px;
+        .count {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .description {
+    margin: 40px 0;
+  }
+  a {
+    color: $headerInnerBackground;
+    text-decoration: none;
+  }
+}
