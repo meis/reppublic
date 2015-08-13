@@ -16,8 +16,8 @@ class User extends React.Component {
 
   componentDidMount() {
     // Ask for user if user is not ready
-    if (!this.props.ready) {
-      Actions.requestUser(this.props.userId);
+    if (!this.props.ready || this.props.name != this.props.params.userId) {
+      Actions.requestUser(this.props.params.userId);
     }
   }
 
