@@ -1,0 +1,42 @@
+@import 'variables';
+
+.header {
+  background-color: #95B85E;
+  color: #FCFCFC;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  .inner {
+    width: 100%;
+    padding: 10px;
+    max-width: $contentMaxWidth;
+    margin: auto;
+    position: relative;
+    background-color: $headerInnerBackground;
+    height: 32px;
+    .title {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding-top: 6px;
+    }
+    .user-info {
+      img {
+        height: 32px;
+        width: 32px;
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      .name {
+        position: absolute;
+        top: 18px;
+        right: 54px;
+      }
+    }
+  }
+}

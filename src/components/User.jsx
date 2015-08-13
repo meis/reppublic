@@ -23,18 +23,36 @@ class User extends React.Component {
 
   render() {
     return(
+      <div className="wrapper">
+      <div className="content">
+        <div className="header">
+          <div className="inner">
+            <div className="title">
+              Popular repositories
+            </div>
+              {this.props.ready? this.userInfo() : ''}
+          </div>
+        </div>
       <div>
         {this.props.ready? this.withUserData() : this.withoutUserData()}
+      </div>
+      </div>
+      </div>
+    );
+  }
+
+  userInfo() {
+    return(
+      <div className="user-info">
+        <img src={this.props.avatar} />
+        <div className="name">{this.props.name}</div>
       </div>
     );
   }
 
   withUserData() {
     return(
-      <div>
-        <div>USER</div>
-        <RouteHandler />
-      </div>
+      <RouteHandler />
     );
   }
 

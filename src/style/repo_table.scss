@@ -1,0 +1,23 @@
+@import 'variables';
+
+table.repos {
+  color: $contentColor;
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  td {
+    margin: 0;
+    padding: 10px 5px;
+    border-bottom: 1px solid $statsColor;
+    &.name {
+      width: 80%;
+      font-weight: bold;
+      &:hover {
+        color: $headerInnerBackground;
+      }
+    }
+    &.stargazers, &.watchers, &.forks {
+      color: $statsColor;
+    }
+  }
+}

@@ -8,8 +8,6 @@ class Actions {
     // This action receives a petition to fetch user data
     // Triggers action updateUser when the data is feched
     requestUser(login) {
-      this.dispatch(login);
-
       Fetch.userInfo().then((data) => {
         this.actions.updateUser(data);
       })
@@ -20,8 +18,6 @@ class Actions {
     // This action receives a petition to fetch user repos
     // Triggers action updateUserRepos when the data is feched
     requestUserRepos(login) {
-      this.dispatch(login);
-
       Fetch.userRepos().then((data) => {
         this.actions.updateUserRepos(data);
       })
