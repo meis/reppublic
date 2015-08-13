@@ -68,7 +68,8 @@ body {
   .repo-page .repo-header .stats {
     position: absolute;
     top: 0;
-    right: 0; }
+    right: 0;
+    color: #CDCDC7; }
     .repo-page .repo-header .stats .stat {
       margin-left: 20px; }
       .repo-page .repo-header .stats .stat .count {
