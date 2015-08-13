@@ -4,8 +4,7 @@
   "description": "Demonstration app using github api to display user's public repositories",
   "main": [
     "index.hml",
-    "dist/app.js",
-    "dist/app.css"
+    "dist/*"
   ],
   "private": true,
   "scripts": {
