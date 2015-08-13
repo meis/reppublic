@@ -2,6 +2,7 @@ import React           from 'react';
 import {RouteHandler}  from 'react-router';
 import UserStore       from '../stores/User';
 import connectToStores from 'alt/utils/connectToStores';
+import Loading         from './Loading';
 
 class User extends React.Component {
   static getStores() {
@@ -32,7 +33,7 @@ class User extends React.Component {
   withoutUserData() {
     return(
       <div>
-        Loading...
+        <Loading />
       </div>
     );
   }
