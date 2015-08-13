@@ -12,8 +12,12 @@ table.repos {
     &.name {
       width: 80%;
       font-weight: bold;
-      &:hover {
-        color: $headerInnerBackground;
+      a {
+        color: $contentColor;
+        text-decoration: none;
+        &:hover {
+          color: $headerInnerBackground;
+        }
       }
     }
     &.stargazers, &.watchers, &.forks {

@@ -22,6 +22,7 @@ let routes = (
       <DefaultRoute handler={Repos}/>
       <Route name="repo" path=":repo" handler={Repo}/>
     </Route>
+    // TODO: Do a proper landpage allowing to search users
     <Redirect from="/" to="user" params={{userId: 'meis'}} />
 
   </Route>

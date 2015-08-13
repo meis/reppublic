@@ -70,8 +70,11 @@ table.repos {
     table.repos td.name {
       width: 80%;
       font-weight: bold; }
-      table.repos td.name:hover {
-        color: #87A655; }
+      table.repos td.name a {
+        color: #5B5B46;
+        text-decoration: none; }
+        table.repos td.name a:hover {
+          color: #87A655; }
     table.repos td.stargazers, table.repos td.watchers, table.repos td.forks {
       color: #CDCDC7; }
       table.repos td.stargazers .count, table.repos td.watchers .count, table.repos td.forks .count {

@@ -1,4 +1,5 @@
-import React from 'react';
+import React           from 'react';
+import {Link}          from 'react-router';
 import Actions         from '../../actions/Actions';
 import ReposStore      from '../../stores/UserRepos';
 import connectToStores from 'alt/utils/connectToStores';
@@ -16,7 +17,7 @@ class Repos extends React.Component {
   componentDidMount() {
     // Ask for repos if they are not present
     if (!this.props.ready) {
-      Actions.requestUserRepos(this.props.userId);
+      Actions.requestUserRepos(this.props.params.userId);
     }
   }
 
@@ -30,10 +31,14 @@ class Repos extends React.Component {
 
   withReposData() {
     let repos = this.props.repos.map((m) => {
+      let linkParams = {userId: this.props.params.userId, repo:m.name};
+
       return (
         <tr className="repo" key={m.id}>
           <td className="name">
-            {m.name}
+            <Link to="repo" params={linkParams}>
+              {m.name}
+            </Link>
           </td>
           <td className="stargazers">
             <span className="octicon octicon-star"></span>
