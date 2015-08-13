@@ -54,7 +54,7 @@ body {
     padding: 0 10px;
     background-color: #FCFCFC;
     color: #5B5B46;
-    height: 100%;
+    min-height: 100%;
     text-align: left; }
   body .content {
     padding: 60px 0px 10px 0px; }

@@ -20,7 +20,7 @@ body {
     padding: 0 10px;
     background-color: $contentBackground;
     color: $contentColor;
-    height: 100%;
+    min-height: 100%;
     text-align: left;
   }
   .content {
